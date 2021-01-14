@@ -1,0 +1,190 @@
+/* Uso esto para llevar el font size a 10px y trabajar con rem*/
+html {
+  font-size: 62.5%; }
+
+/* Estilo del titulo o logo */
+.header__logo {
+  color: #0909d4;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  margin-top: 5px;
+  animation: jackInTheBox;
+  animation-duration: 5s; }
+
+nav {
+  background-color: #3eb7fd; }
+  nav ul li a {
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: "Libre Baskerville", serif;
+    margin: 5px 15px 5px 15px;
+    justify-content: space-between; }
+
+.home__tituloSomos {
+  text-align: center;
+  margin-top: 25px; }
+
+.home__detalleSomos {
+  text-align: center;
+  margin-top: 25px;
+  margin-top: 15px;
+  font-size: 1.8rem; }
+
+.home__cards {
+  margin-top: 20px;
+  justify-content: space-around; }
+  .home__cards p {
+    font-size: 1.4rem;
+    padding-top: 5px;
+    padding-bottom: 10px; }
+  .home__cards h4 {
+    margin-top: 20px;
+    justify-content: space-around;
+    padding-top: 5px;
+    text-align: center; }
+
+.home__banner {
+  background-color: papayawhip;
+  justify-content: center; }
+
+.home__carrousel {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.body__titulo {
+  color: rgba(3, 73, 3, 0.747);
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  padding-bottom: 25px;
+  margin-left: 10px; }
+
+.body__subtitulo {
+  margin-bottom: 15px; }
+
+.body__gridServicios {
+  display: grid;
+  grid-template-areas: "titulo titulo titulo publicidad" "offset sublimacion ploter publicidad";
+  grid-template-columns: 30% 30% 20% 20%;
+  grid-template-rows: 50% 50%; }
+
+.card {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.body__productos {
+  text-align: center; }
+
+#offset {
+  grid-area: offset;
+  margin-top: 10px; }
+
+#subli {
+  grid-area: sublimacion;
+  margin-top: 10px; }
+
+#ploter {
+  grid-area: ploter;
+  margin-top: 10px; }
+
+#publicidadServicios {
+  grid-area: publicidad;
+  font-size: 1.3rem;
+  background-color: #e1f3a0;
+  justify-self: center;
+  align-items: center; }
+
+.body__Cintas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center; }
+
+.body__Remeras {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: flex-start;
+  width: 800px; }
+
+.NuestrosTrabajos__Imagenes {
+  width: 300px;
+  height: 300px;
+  margin: 5px 5px; }
+
+.remerasHijo1 {
+  flex-grow: 1; }
+
+.remerasHijo2 {
+  flex-grow: 3; }
+
+body div p {
+  animation: jackInTheBox;
+  animation-duration: 5s; }
+
+#Cintas {
+  transition: transform 3s; }
+
+#Cintas:hover {
+  transform: scale(2, 2); }
+
+#Remeras {
+  width: 800px;
+  transition: color 1s; }
+
+#Remeras:hover {
+  color: red;
+  font-size: 2rem; }
+
+#Trabajos {
+  animation: flash;
+  animation-delay: 5s;
+  animation-duration: 2s; }
+
+.form__label {
+  color: black;
+  line-height: 10px;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  padding-left: 5px; }
+
+form {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+div iframe {
+  margin-top: 20px; }
+
+/* Estilo del footer */
+footer {
+  background-image: linear-gradient(to right, rgba(21, 101, 248, 0.87), #b2ebf3);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  justify-content: space-between; }
+  footer p {
+    color: white;
+    line-height: 15px;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    animation: jackInTheBox;
+    animation-duration: 5s; }
+
+@media (max-width: 1300px) {
+  .carousel-inner img {
+    width: 40%;
+    height: 40%; } }
