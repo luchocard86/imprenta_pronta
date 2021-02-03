@@ -1,17 +1,26 @@
 {
-  "name": "entrega4",
+  "name": "imprentapronta",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sitio web para Imprenta Pronta en capital federal",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/imprenta_pronta.scss css/imprenta_pronta.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
+  "author": "Luis Cardozo",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^5.0.0",
-    "nodemon": "^2.0.6"
-  }
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luchocard86/imprenta_pronta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luchocard86/imprenta_pronta/issues"
+  },
+  "homepage": "https://github.com/luchocard86/imprenta_pronta#readme"
 }

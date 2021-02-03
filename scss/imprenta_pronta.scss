@@ -1,176 +1,258 @@
-$logo-color: rgb(9, 9, 212); 
-$nav_footer-fuente: 'Libre Baskerville', serif;
+$firaSans: 'Fira Sans', sans-serif;;
+$lato: 'Lato', sans-serif;
+$ptSerifItalica: 'PT Serif', serif;
+$sourceSerifPro: 'Source Serif Pro', serif;
 $animacion: jackInTheBox;
-$footer-degradado: linear-gradient(to right, rgba(21, 101, 248, 0.87) , rgb(178, 235, 243) );
 
-/* Uso esto para llevar el font size a 10px y trabajar con rem*/
+/* Llevo el font size a 10px y trabajar con rem*/
 html{
     font-size: 62.5%;
+} 
+ 
+footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  justify-content: space-between;
+      p{
+          color: white;
+          line-height: 15px;
+          font-family: $sourceSerifPro;
+          padding: 0.5rem;
+          display: inline-block;
+          font-size: 1.4rem;
+      }
+} 
+
+.paginas__fondo{
+  background-color:rgb(236, 234, 215);
 }
-/* Estilo del titulo o logo */ 
-.header__logo{
-    color: $logo-color;
-    font-weight: bold;
-    letter-spacing: 2px;
+
+.item__activo{
+color: yellow;
+}
+
+.footer_magin {
+  margin-top: 20px;
+}
+
+.paginas__titulo {
+  padding-top: 2.5rem;
+  font-family: $lato;
+  padding-bottom: 2.5rem;
+  text-align: left;
+  color:rgb(37, 5, 150);
+}
+
+/*************************************************/
+/*           INDEX                               */
+/*************************************************/
+
+.nav__logo{
     font-size: 2rem;
-    font-family: 'Rubik', sans-serif;
+    font-family: $ptSerifItalica;
     text-align: center;
-    margin-top: 5px;
-    animation: $animacion;
-    animation-duration: 5s;
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
 }
 nav{
-    background-color: rgb(62, 183, 253) ;
     ul li a{
-        font-weight: bold;
-        font-size: 1.4rem;
-        font-family: $nav_footer-fuente;
-        margin: 5px 15px 5px 15px;
+        font-size: 1.6rem;
+        font-family: $sourceSerifPro;
+        margin: 0.5rem 1.5rem 0.5rem 1.5rem;
         justify-content: space-between;
     }
 }
-
-@each $elementoHome in titulo, detalle, cards, banner, carrousel {
+@each $elementoHome in titulo, detalle, cards, carousel, parrafo {
     @if $elementoHome==titulo {
-        .home__#{$elementoHome}Somos { 
+        .home__#{$elementoHome} { 
             text-align: center;
-            margin-top: 25px;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+                h1{
+                    font-size: 5rem;
+                    font-weight: bold;
+                    padding-top: 3rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                p{
+                    padding-top: 3rem;
+                }
         }
     } @else if $elementoHome==detalle {
-        .home__#{$elementoHome}Somos { 
-            text-align: center;
-            margin-top: 25px;
-            margin-top: 15px;
-            font-size: 1.8rem;
-        }
-    } @else if $elementoHome==banner {
         .home__#{$elementoHome} { 
-            background-color: papayawhip;
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 1.5rem;
+        }
+    } @else if $elementoHome==carousel {
+        .home__#{$elementoHome} { 
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color:rgb(250, 240, 154);
             justify-content: center;
         }
-    }
-    @else if $elementoHome==carrousel {
-        .home__#{$elementoHome} { 
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    }
-    @else if $elementoHome==cards{
+    } @else if $elementoHome==cards{
         .home__#{$elementoHome} {
-            margin-top: 20px;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             justify-content: space-around;
+            background-color: rgb(250, 240, 154);
             p{
-                font-size: 1.4rem;
+                font-size: 1.7rem;
                 padding-top: 5px; 
                 padding-bottom: 10px;
+                text-align: center;
+                font-family: $firaSans;
             }
-            h4{
+            h3{
                 margin-top: 20px;
                 justify-content: space-around;
                 padding-top: 5px;
                 text-align: center;
+                font-family: $lato;
             }
+        }
+    } @else if $elementoHome==parrafo {
+        .home__#{$elementoHome} { 
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 2rem;
+            font-family: $firaSans;
         }
     }
 }
 
-.body__titulo {
-    color: rgba(3, 73, 3, 0.747);
-    font-weight: bold;
-    font-family: 'Lora', serif;
-    padding-bottom: 25px;
-    margin-left: 10px;}
+.home__imgCollage{
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
 
-.body__subtitulo{
+/*************************************************/
+/*              SERVICIOS                        */
+/*************************************************/
+
+.servicios__cardTitulo {
+    font-family: $lato;
+    text-align: center;
+}
+
+.servicios__cardTexto {
+    font-family: $firaSans;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.servicios__espacioRow{
+    padding-bottom: 3rem;
+}
+
+.servicios__espacioColIzq{
+    margin-left: 2rem;
+}
+
+.servicios__espacioColDer{
+    margin-right: 2rem;
+}
+
+.card{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+    
+
+/*************************************************/
+/*              PRODUCTOS                        */
+/*************************************************/
+
+.productos__ul{
+    padding-left: 1rem;
+}
+
+.productos__texto{
+    font-family: $firaSans;
+    font-size: 1.7rem;
+}
+
+ul li h2 {
+    font-family: $lato;
+    padding-bottom: 1.5rem;
+}
+
+
+/*************************************************/
+/*          NUESTROS TRABAJOS                    */
+/*************************************************/
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
   margin-bottom: 15px;
 }
-.body__gridServicios{
-    display: grid;
-    grid-template-areas: 
-    "titulo titulo titulo publicidad"
-    "offset sublimacion ploter publicidad";
-    grid-template-columns: 30% 30% 20% 20%;
-    grid-template-rows: 50% 50%;
+
+.trabajos__modalTitulo {
+  font-family: $lato;
+  text-align: left;
+  color:rgb(37, 5, 150);
 }
-.card{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-.body__productos{
-    text-align: center;
-  }
-  #offset{
-    grid-area: offset;
-    margin-top: 10px;
+
+/*************************************************/
+/*          PEDIDOS ONLINE                       */
+/*************************************************/
+
+.pedido__info {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    background-color:rgb(250, 240, 154);
+    margin-bottom: 2rem ;
+
+    h3{
+        justify-content: space-around;
+        padding-top: 5px;
+        text-align: center;
+        font-family: $lato;
+    }
+
+    p {
+        font-size: 1.8rem;
+        padding-top: 5px; 
+        padding-bottom: 5px;
+        text-align: center;
+        font-family: $firaSans;
+    }
+
+    img{
+        padding-bottom: 1rem;
+    }
 }
-#subli{
-    grid-area: sublimacion;
-    margin-top: 10px;
-}
-#ploter{
-    grid-area: ploter;
-    margin-top: 10px;
-}
-#publicidadServicios{
-    grid-area: publicidad;
-    font-size: 1.3rem;
-    background-color: rgb(225, 243, 160);
-    justify-self: center;
-    align-items: center;
-}
-.body__Cintas{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: center;
-}
-.body__Remeras{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: flex-start;
-    width: 800px;
-}
-.NuestrosTrabajos__Imagenes {
-    width: 300px;
-    height: 300px;
-    margin: 5px 5px;
-}
-.remerasHijo1{
-    flex-grow: 1;
-}
-.remerasHijo2{
-    flex-grow: 3;
-}
-body div p{
-    animation: jackInTheBox;
-    animation-duration: 5s;
-}
-#Cintas{
-    transition: transform 3s;
-}
-#Cintas:hover{
-    transform: scale(2,2);
-}
-#Remeras{
-    width: 800px;
-    transition: color 1s;
-}
-#Remeras:hover{
-    color: red;
-    font-size: 2rem;
-}
-#Trabajos{
-    animation: flash;
-    animation-delay: 5s;
-    animation-duration: 2s;
-}
+
+/*************************************************/
+/*          CONTACTO                             */
+/*************************************************/
+
 .form__label {
   color: black;
   line-height: 10px;
@@ -180,36 +262,240 @@ body div p{
 
 form {
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  padding-bottom: 10px; }
+
+  .contacto__direccion {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    background-color:rgb(49, 47, 47);
+    margin-bottom: 1rem ;
+    text-align: center;
+    width: 100%;
+
+    h1{
+        justify-content: space-around;
+        padding-top: 5px;
+        font-family: $lato;
+    }
+}
 
 div iframe{
   margin-top: 20px;
+  width: 100%;
+}  
+      
+/*************************************************/
+/*          MEDIA QUERIES                        */
+/*************************************************/
+
+@media(max-width: 335px) {
+  
+  .carousel-inner img {
+    width: 75%;
+    height: 75%;
+  }
+
+  @each $elementoHome in titulo, detalle, cards, carousel, parrafo {
+    @if $elementoHome==titulo {
+        .home__#{$elementoHome} { 
+            text-align: center;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+                h1{
+                    font-size: 4rem;
+                    font-weight: bold;
+                    padding-top: 1rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+          }
+      }
+    }
+  }
+
+
+@media(min-width: 335px) and (max-width: 576px) {
+  
+  .carousel-inner img {
+    width: 75%;
+    height: 75%;
+  }
+
+  @each $elementoHome in titulo, detalle, cards, carousel, parrafo {
+    @if $elementoHome==titulo {
+        .home__#{$elementoHome} { 
+            text-align: center;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+                h1{
+                    font-size: 4rem;
+                    font-weight: bold;
+                    padding-top: 3rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+          }
+      }
+    }
+
+
+  }
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .carousel-inner img {
+    width: 75%;
+    height: 75%;
+  }
+
+  @each $elementoHome in titulo, detalle, cards, carousel, parrafo {
+    @if $elementoHome==titulo {
+        .home__#{$elementoHome} { 
+            text-align: center;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+                h1{
+                    font-size: 5rem;
+                    font-weight: bold;
+                    padding-top: 3rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+          }
+      }
+  }
+
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    }
+
 }
-/* Estilo del footer */ 
-footer{
-    background-image: $footer-degradado;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: 20px;
-    justify-content: space-between;
-        p{
-            color: white;
-            line-height: 15px;
-            font-weight: bold;
-            font-family: $nav_footer-fuente;
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 5px;
-            margin-right: 5px;
-            display: inline-block;
-            animation: $animacion;
-            animation-duration: 5s;
-        }
-} 
-@media(max-width: 1300px) {
-    .carousel-inner img {
-        width: 40%;
-        height: 40%;
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .carousel-inner img {
+    width: 75%;
+    height: 75%;
+  }
+
+  @each $elementoHome in titulo, detalle, cards, carousel, parrafo {
+    @if $elementoHome==titulo {
+        .home__#{$elementoHome} { 
+            text-align: center;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+                h1{
+                    font-size: 5rem;
+                    font-weight: bold;
+                    padding-top: 3rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+          }
+      }
+  }
+
+  .col-md-12 {
+    height: 500px;
+  }
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1300px)  {
+
+  .carousel-inner img {
+    width: 40%;
+    height: 40%;
+  }
+
+  @each $elementoHome in titulo, detalle, cards, carousel, parrafo {
+    @if $elementoHome==titulo {
+        .home__#{$elementoHome} { 
+            text-align: center;
+            background-color: rgb(49, 47, 47);
+            height: 20rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+                h1{
+                    font-size: 5rem;
+                    font-weight: bold;
+                    padding-top: 3rem;
+                    font-family: $ptSerifItalica;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+                h2{
+                    padding-top: 0.5rem;
+                    animation: $animacion;
+                    animation-duration: 5s;
+                }
+          }
+      }
+  }
+
+  .col-md-12 {
+    height: 800px;
+  }
+
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    }
+
+}
+
+@media (min-width: 1300px) {
+
+  .col-md-12 {
+    height: 800px;
+  }
+
+  .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
     }
 }

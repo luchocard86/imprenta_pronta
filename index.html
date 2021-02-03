@@ -9,119 +9,118 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Libre+Baskerville&family=Lora:wght@500&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:wght@700&family=PT+Serif:ital,wght@1,700&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/imprenta_pronta.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4 col-xl-3">
-                <p class="header__logo">Imprenta Pronta</p>
-            </div>
-            <div class="col-lg-8 col-xl-9" id="menu">
-                <nav class="navbar-expand-lg navbar navbar-light">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nuestros_trabajos.html">Nuestros trabajos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pedido_online.html">Pedidos online</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand text-white nav__logo" href="index.html">Imprenta Pronta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-warning item__activo" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="pages/servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="pages/productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="pages/nuestros_trabajos.html">Nuestros trabajos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="pages/pedido_online.html">Pedidos online</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="pages/contacto.html">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row home__banner">
-            <div class="col-lg-6">
-                <div id="carouselHome" class="carousel slide home__carousel" data-ride="carousel">
-                    <!-- Indicators -->
+    </nav>
+    <div class="container-fluid home__carousel">
+        <div class="row">
+            <div class="col">
+                <div id="carouselHome" class="carousel slide" data-ride="carousel">
                     <ul class="carousel-indicators">
-                    <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselHome" data-slide-to="1"></li>
-                    <li data-target="#carouselHome" data-slide-to="2"></li>
+                        <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselHome" data-slide-to="1"></li>
+                        <li data-target="#carouselHome" data-slide-to="2"></li>
                     </ul>      
-                    <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/impresion_offset.jpg" alt="impresion_offset.jpg" class="mx-auto d-block">
+                            <img src="images/offset-printing-macine-3634408_1920.jpg" alt="offset1.jpg" class="mx-auto d-block">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/colores.jpg" alt="colores" class="mx-auto d-block">
+                            <img src="images/machine-585262_1920.jpg" alt="colores" class="mx-auto d-block">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/offset.jpg" alt="offset" class="mx-auto d-block">
+                            <img src="images/offset-printing-3562700_1920.jpg" alt="offset2" class="mx-auto d-block">
                         </div>
-
                     </div>
-                    <!-- Left and right controls -->
                     <a class="carousel-control-prev" href="#carouselHome" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
+                        <span class="carousel-control-prev-icon"></span>
                     </a>
                     <a class="carousel-control-next" href="#carouselHome" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
+                        <span class="carousel-control-next-icon"></span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container home__tituloSomos" id="">
+    <div class="container-fluid home__titulo" id="">
         <div class="row">
-            <div class="col-lg-12">
-                <h1>Imprenta Pronta</h1>
+            <div class="col">
+                <h1 class="text-white">Imprenta Pronta</h1>
+                <h2 class="text-white">Una empresa chica con grandes ideas</h2>
             </div>
         </div>
-    </div>     
-    <div class="container home__detalleSomos">
+    </div>
+    <div class="container-fluid home__detalle" id="">
         <div class="row">
-            <div class="col-lg-12" id="">
-                <p>Una empresa chica con grandes ideas</p>
+            <div class="col-lg-6 col-xl-6 d-flex flex-row justify-content-center flex-wrap">
+                <p class="home__parrafo align-self-center">Con más de 25 años en el rubro podemos asegurar que con nosotros siempre tendrá la oportunidad de mejorar sus costos.</p> 
+                <p class="home__parrafo align-self-center">Tenemos un presupuesto acorde a cada una de sus necesidades, ya que también realizamos tiradas pequeñas que posibilitan el progresivo mejoramiento de su producto.</p>
+            </div>
+            <div class="col-lg-6 col-xl-6">
+                <img src="images/collage_home.jpg" alt="" class="home__imgCollage">
             </div>
         </div>
     </div>
     <div class="container-fluid" id="">
         <div class="row home__cards">
             <div class="col-lg-4 col-xl-3">
-                    <img src="images/rapidez.jpg" alt="" class="mx-auto d-block" width="200px" height="200px">
-                    <h4 class="card-title">Trabajos urgentes</h4>
+                    <img src="images/rapidez.jpg" alt="" class="mx-auto d-block" width="250px" height="200px">
+                    <h3 class="card-title">Trabajos urgentes</h3>
                     <p class="card-text">Nos especializamos como nuestro nombre indica, en Trabajos que requieran de la Urgencia de los tiempos que corren.</p>
             </div>
             <div class="col-lg-4 col-xl-3">
-                    <img src="images/diseno.png" alt="" class="mx-auto d-block" width="200px" height="200px">
-                    <h4 class="card-title">Diseño</h4>
+                    <img src="images/disenio grafico.jpg" alt="" class="mx-auto d-block" width="250px" height="200px">
+                    <h3 class="card-title">Diseño</h3>
                     <p class="card-text">Trato directo con el diseñador e impresor, para facilitar la comprensión de su idea o proyecto.</p>
             </div>
             <div class="col-lg-4 col-xl-3">
-                    <img src="images/alcancia.jpg" alt="" class="mx-auto d-block" width="200px" height="200px">
-                    <h4 class="card-title">Precios accesibles</h4>
+                    <img src="images/alcancia.jpg" alt="" class="mx-auto d-block" width="250px" height="200px">
+                    <h3 class="card-title">Precios accesibles</h3>
                     <p class="card-text">Manejamos presupuestos acordes a cada una de sus necesidades.</p>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid bg-info">
         <div class="row">
-            <div class="col-lg-12 col-xl-12">
-            <footer>
-                <p class="">Imprenta Pronta - Ciudad Autónoma de Buenos Aires</p>
-                <p class="">Copyright @Imprenta Pronta</p>
-            </footer>
+            <div class="col">
+                <footer>
+                    <p>Imprenta Pronta - CABA</p>
+                    <p>Copyright @Imprenta Pronta</p>
+                </footer>
+            </div>
+        </div>
     </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
